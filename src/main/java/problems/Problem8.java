@@ -13,7 +13,7 @@ public class Problem8 {
         int[] record = new int[target + 1];
         record[0] = 1;
         record[1] = 2;
-        for (int i = 2; i <= target; i++) {
+        for (int i = 2; i < target; i++) {
             record[i] = record[i - 1] + record[i - 2];
         }
         return record[target-1];
