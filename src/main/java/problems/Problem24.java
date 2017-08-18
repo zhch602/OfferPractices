@@ -8,15 +8,15 @@ public class Problem24 {
     ArrayList<Integer> list = new ArrayList<Integer>();
 
     public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
-        if (root==null)
+        if (root == null)
             return allList;
         list.add(root.val);
-        target-=root.val;
-        if (target==0&&root.left==null&&root.right==null)
+        target -= root.val;
+        if (target == 0 && root.left == null && root.right == null)
             allList.add(new ArrayList<Integer>(list));
-        FindPath(root.left,target);
-        FindPath(root.right,target);
-        list.remove(list.size()-1);
+        FindPath(root.left, target);
+        FindPath(root.right, target);
+        list.remove(list.size() - 1);
         return allList;
     }
 
